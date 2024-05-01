@@ -1,0 +1,12 @@
+C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\Ecommerce\Ecommerce.DTO\bin\Debug\net7.0\Ecommerce.DTO.deps.json
+C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\Ecommerce\Ecommerce.DTO\bin\Debug\net7.0\Ecommerce.DTO.dll
+C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\Ecommerce\Ecommerce.DTO\bin\Debug\net7.0\Ecommerce.DTO.pdb
+C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\Ecommerce\Ecommerce.DTO\obj\Debug\net7.0\Ecommerce.DTO.csproj.AssemblyReference.cache
+C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\Ecommerce\Ecommerce.DTO\obj\Debug\net7.0\Ecommerce.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\Ecommerce\Ecommerce.DTO\obj\Debug\net7.0\Ecommerce.DTO.AssemblyInfoInputs.cache
+C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\Ecommerce\Ecommerce.DTO\obj\Debug\net7.0\Ecommerce.DTO.AssemblyInfo.cs
+C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\Ecommerce\Ecommerce.DTO\obj\Debug\net7.0\Ecommerce.DTO.csproj.CoreCompileInputs.cache
+C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\Ecommerce\Ecommerce.DTO\obj\Debug\net7.0\Ecommerce.DTO.dll
+C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\Ecommerce\Ecommerce.DTO\obj\Debug\net7.0\refint\Ecommerce.DTO.dll
+C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\Ecommerce\Ecommerce.DTO\obj\Debug\net7.0\Ecommerce.DTO.pdb
+C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\Ecommerce\Ecommerce.DTO\obj\Debug\net7.0\ref\Ecommerce.DTO.dll

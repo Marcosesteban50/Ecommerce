@@ -1,0 +1,106 @@
+﻿body {
+   background:transparent;
+}
+
+
+.divH3Login{
+    font-size: 35px;
+    position:fixed;
+    text-align: center;
+    top:15%;
+    left:40%;
+    
+   
+    
+}
+
+
+
+
+.h3Login {
+    color:black;
+}
+
+
+.inputs {
+    position: relative;
+    width: 300px;
+    background: transparent;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    color: black;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    
+}
+
+
+.box {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    left: 40%;
+    top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(18px);
+    border-radius: 30px;
+    border: 3px solid black;
+}
+
+
+.btnRegistro {
+    font-weight: 700;
+    color: black;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 5px 14px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+    .btnRegistro:hover {
+        background: lightcoral;
+        color: white;
+    }
+
+
+.btnLogin {
+    font-weight: 700;
+    text-decoration:none;
+    
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+}
+
+    .btnLogin:hover {
+        background: lightslategrey;
+        color: white;
+    }
+
+
+.group {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    gap: 5px;
+    position: relative;
+    top: 35px;
+    
+    
+    
+   
+    
+}

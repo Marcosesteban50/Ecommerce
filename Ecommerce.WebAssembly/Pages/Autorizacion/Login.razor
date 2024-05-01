@@ -1,0 +1,108 @@
+﻿@page "/login"
+@layout LoginLayout
+
+
+@using Ecommerce.WebAssembly.Extensiones;
+@using Microsoft.AspNetCore.Components.Authorization;
+
+
+
+@inject IUsuarioServicio usuarioServicio;
+@inject AuthenticationStateProvider autenticationProvider;
+
+
+
+
+<div class="box">
+    <div>
+        <div>
+            <div>
+                <div class="divH3Login"><h3 class="h3Login">Login</h3></div>
+                <div>
+                    <EditForm Model="modelo" OnValidSubmit="Iniciar">
+                        <DataAnnotationsValidator></DataAnnotationsValidator>
+                        <div class="mb-3">
+                            <input id="inputEmail" class="inputs" type="email" placeholder="Correo" @bind-value="modelo.Correo" autocomplete="off" />
+                            <label for="inputEmail"></label>
+                            <ValidationMessage For="@(()=>modelo.Correo)" />
+                        </div>
+                        <div class="mb-3">
+                            <input class="inputs" id="inputPassword" type="password" placeholder="Password" @bind-value="modelo.Clave" autocomplete="off" />
+                            <label for="inputPassword"></label>
+                            <ValidationMessage For="@(()=>modelo.Clave)" />
+                        </div>
+                        <div class="group">
+
+                            <button class="btnRegistro" type="submit">Ingresar</button>
+
+                            <a href="/registrarse" class="btnLogin">Registrate!</a>
+                            <button class="btnRegistro" type="button" @onclick="HandleGoogleLogin">
+                                <i class="fab fa-google"></i> Sign in with Google
+                            </button>
+                        
+                        </div>
+
+                        
+                    </EditForm>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@code {
+
+
+
+
+    private void HandleGoogleLogin()
+    {
+        
+        navServicio.NavigateTo("https://localhost:7084/account/login", forceLoad: true);
+    }
+
+
+
+
+
+
+
+    private LoginDTO modelo = new LoginDTO();
+
+
+
+    private async Task Iniciar()
+    {
+        var response = await usuarioServicio.Autorizacion(modelo);
+
+        if (response.EsCorrecto)
+        {
+            SesionDTO sesion = (SesionDTO)response.Resultado!;
+
+            var autExt = (AutenticacionExtension)autenticationProvider;
+
+            await autExt.ActualizarEstadoAutenticacion(sesion);
+
+
+            if (sesion.Rol!.ToLower() == "cliente")
+            {
+                //si es cliente lo mandamos al catalogo
+                navServicio.NavigateTo("/catalogo");
+            }
+            else
+            {
+                navServicio.NavigateTo("/dashboard");
+
+            }
+
+        }
+        else
+        {
+            toastService.ShowWarning(response.Mensaje!);
+        }
+    }
+
+}

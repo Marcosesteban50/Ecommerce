@@ -1,0 +1,49 @@
+﻿@using System.Net.Http
+@using System.Net.Http.Json
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.AspNetCore.Components.WebAssembly.Http
+@using Microsoft.JSInterop
+@using Ecommerce.WebAssembly
+@using Ecommerce.WebAssembly.Shared
+
+
+
+@* Llamando al blazored localstorage dentro del todo el proyecto de webAssembly*@
+@using Blazored.LocalStorage
+
+
+@* Llamando al blazored Toast dentro del todo el proyecto de webAssembly*@
+
+@using Blazored.Toast
+
+@* Llamando al blazored Toast . Services dentro del todo el proyecto de webAssembly*@
+
+
+@using Blazored.Toast.Services@*
+    
+
+Llamando al CurrieTechnologies.Razor.SweetAlert2 dentro del todo el proyecto de webAssembly*@
+
+
+@using CurrieTechnologies.Razor.SweetAlert2
+
+
+
+
+@using Ecommerce.DTO
+@using Ecommerce.WebAssembly.Servicios.Contrato
+
+@using Microsoft.AspNetCore.Authorization;
+
+
+
+
+@inject NavigationManager navServicio
+@inject SweetAlertService Swal
+@inject IToastService toastService
+
+
+

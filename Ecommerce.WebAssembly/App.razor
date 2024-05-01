@@ -1,0 +1,42 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization;
+
+
+
+
+<CascadingAuthenticationState>
+
+
+<Router AppAssembly="@typeof(App).Assembly">
+    <Found Context="routeData">
+     
+
+            <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+
+                <NotAuthorized>
+                    @{
+                        //Si no esta autenticado
+                        if(context.User.Identity?.IsAuthenticated != true)
+                        {
+                            //el navservicio esta en el Imports.razor
+                            navServicio.NavigateTo("/login");
+                        }
+                        else
+                        {
+                            <p class="alert alert-danger">No esta autorizado para ver esta pagina</p>
+                        }
+                    }
+                </NotAuthorized>
+
+            </AuthorizeRouteView>
+
+    </Found>
+    <NotFound>
+        <PageTitle>Not found</PageTitle>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <p role="alert">Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
+
+
+</CascadingAuthenticationState>
